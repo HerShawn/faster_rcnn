@@ -15,8 +15,10 @@ function save_model_path = fast_rcnn_train(conf, imdb_train, roidb_train, vararg
     ip.addParamValue('do_val',          false,          @isscalar);
     ip.addParamValue('imdb_val',        struct(),       @isstruct);
     ip.addParamValue('roidb_val',       struct(),       @isstruct);
-    ip.addParamValue('val_iters',       500,            @isscalar); 
-    ip.addParamValue('val_interval',    2000,           @isscalar); 
+%     ip.addParamValue('val_iters',       500,            @isscalar); 
+    ip.addParamValue('val_iters',       22,            @isscalar);
+%     ip.addParamValue('val_interval',    2000,           @isscalar); 
+    ip.addParamValue('val_interval',    88,           @isscalar); 
     ip.addParamValue('snapshot_interval',...
                                         10000,          @isscalar);
     ip.addParamValue('solver_def_file', fullfile(pwd, 'models', 'Zeiler_conv5', 'solver.prototxt'), ...

@@ -18,6 +18,7 @@ function roidb = roidb_from_voc(imdb, varargin)
 
 ip = inputParser;
 ip.addRequired('imdb', @isstruct);
+% ip.addParamValue('exclude_difficult_samples',       true,   @islogical);
 ip.addParamValue('exclude_difficult_samples',       true,   @islogical);
 ip.addParamValue('with_selective_search',           false,  @islogical);
 ip.addParamValue('with_edge_box',                   false,  @islogical);
